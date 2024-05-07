@@ -47,6 +47,21 @@ public class Board {
 		piece.position = position; // é protected, mas como está no pacote board, posso acessar
 
 	}
+	
+	public Piece removePiece(Position position) {
+		if(!positionExists(position)) {
+			throw new BoardException("Position not on the board");
+		}
+		
+		if(piece(position) == null) {
+			return null;
+		}else {
+			Piece aux = piece(position);
+			aux.position = null;
+			pieces[position.getRow()] [position.getColumn()] = null;
+			return aux;
+		}
+	}
 
 	private boolean positionExists(int row, int column) {
 		return row >= 0 && row < rows && column >= 0 && column < columns;
