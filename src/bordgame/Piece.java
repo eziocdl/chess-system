@@ -16,8 +16,12 @@ public abstract class Piece {
 	protected Board getBoard() {
 		return board;
 	}
+	
+	
 	// hook metodo que faz um gancho com uma  subclasse através de um método concreto ele implementa uma class abstrata
 	public abstract boolean [][] possibleMoves();
+	
+	
 	public boolean possibleMove(Position position) {
 		return possibleMoves()[position.getRow()][position.getColumn()];
 	}
