@@ -56,7 +56,7 @@ public class UI {
 	public static void printMatch(ChessMatch chessMatch,  List<ChessPiece> capured ) {
 		printBoard(chessMatch.getPieces());
 		System.out.println();
-		printCapturedPieces(captured);
+		printCapturedPieces(capured);
 		System.out.println();
 		System.out.println("Turn : " + chessMatch.getTurn());
 		
